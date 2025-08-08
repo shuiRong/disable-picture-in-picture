@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Disable Picture-in-Picture",
+  "version": "1.0.0",
+  "description": "Disable the annoying Picture-in-Picture mode on all video elements",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_title": "Disable Picture-in-Picture"
+  }
+}
